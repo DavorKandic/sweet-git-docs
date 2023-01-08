@@ -34,3 +34,8 @@ git diff <COMM1>..<COMM2>	#diffs 2 commits
 
 #GITHUB
 =======
+
+#HASHING
+========
+git hash-object <FILE>		#generate & show hash for object (not storing it)
+							#example on term: echo "hello world" | git hash-object --stdin
