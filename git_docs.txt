@@ -1,0 +1,54 @@
+##############################--- GIT DOCS ---#######################################
+
+General:
+--------
+1) Git stores snapshots
+=======================
+When you commit, git stores snapshots of the entire file, 
+it does not store diffs from the previous commit. 
+As a repository grows, the object count grows exponentially 
+and clearly it becomes inefficient to store the data as loose object files. 
+Hence, git packs them and stores them as a . pack file.
+
+2) Git Database
+===============
+At the core, git is nothing but a key-value data store. 
+We can insert any kind of content into a Git repository and Git will hand us back a unique key 
+we can later use to retrieve that content.
+Git uses SHA-1 hash of the content (content could either refer a file or commit or directory structure) 
+as the key and the content itself (compressed) acts as the value.
+
+3) Git is a decentralized VCS 
+=============================
+— In a centralized VCS, the database resides on a central server and you checkout a copy from the server. 
+Most of the commands require you to contact the central database and hence require network access. 
+In a decentralized or distributed VCS, each and every node has a copy of the database 
+and hence you clone a copy from a remote server. 
+Note that the remote server has no special permissions except for the fact that all the nodes have access to the remote server. 
+As a result of this, most of the commands on git (except git push or git pull) can be performed without network access.
+
+4) Content of .git dir
+======================
+When you clone a git repository, it creates a .git folder at the root of the repository. 
+This is where git stores all the data.
+
+Contents of .git are:
+The branches directory isn’t used by newer Git versions.
+The description file is used to provide a name to the repository with the description and is only used by the Web UI.
+The config file contains your project-specific configuration options
+The info directory keeps a global exclude file for ignored patterns that you don’t want to track in a .gitignore file.
+The hooks directory contains your client- or server-side hook scripts.
+The index file is where Git stores your staging area information.
+
+3 main components in this .git folder — 
+
+Objects directory — The objects directory stores all the content of the git database.
+Refs directory — The refs directory stores pointers into commit objects in that data.
+Head file — The HEAD file points to the branch you currently have checked out.
+
+5) 4 types of git objects
+=========================
+-commit
+-tree
+-blob
+-annotated tag
