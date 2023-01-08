@@ -3,3 +3,7 @@
 #1: Always check status before you initialize a repo!
 
 #2: Never rebase what have been shared with others!
+
+#3: Git reflogs are not frequently used, but they can be a life-savers!
+
+#4: Remember that reflogs are only for your local repo and that they expire!
