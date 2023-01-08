@@ -5,6 +5,7 @@
 git init					#initialize a repo
 git status					#status of a repo
 git log						#show commit history
+git clone <...>				#clone a repo from GitHub
 
 #BASIC-WORK
 ===========
