@@ -1,13 +1,36 @@
 ##################--- GIT COMMANDS ---######################
 
+#BASIC-INITIALIZE & CHECKS
+==========================
 git init					#initialize a repo
 git status					#status of a repo
 git log						#show commit history
+
+#BASIC-WORK
+===========
 git restore <FILE>			#discard changes in working directory
 git add <FILE> 				#add file from working directory to stagging area
 git add .					#add all files from working directory to stagging area
 git commit          		#commit from stagging
 git commit -m "<MESSAGE>"	#commit with message
+
+#BRANCHING
+==========
 git branch					#show branches
+
+#TAGGING
+========
 git tag						#show tags
+
+#DIFFING
+========
 git diff <COMM1>..<COMM2>	#diffs 2 commits
+
+#MERGING
+========
+
+#REBASING
+=========
+
+#GITHUB
+=======
