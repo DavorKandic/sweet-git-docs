@@ -33,22 +33,34 @@ When you clone a git repository, it creates a .git folder at the root of the rep
 This is where git stores all the data.
 
 Contents of .git are:
-The branches directory isn’t used by newer Git versions.
-The description file is used to provide a name to the repository with the description and is only used by the Web UI.
-The config file contains your project-specific configuration options
-The info directory keeps a global exclude file for ignored patterns that you don’t want to track in a .gitignore file.
-The hooks directory contains your client- or server-side hook scripts.
-The index file is where Git stores your staging area information.
+The BRANCHES directory isn’t used by newer Git versions.
+The DESCRIPTION file is used to provide a name to the repository with the description and is only used by the Web UI.
+The CONFIG file contains your project-specific configuration options
+The INFO directory keeps a global exclude file for ignored patterns that you don’t want to track in a .gitignore file.
+The HOOKS directory contains your client- or server-side hook scripts.
+The INDEX file is where Git stores your staging area information.
 
 3 main components in this .git folder — 
 
-Objects directory — The objects directory stores all the content of the git database.
-Refs directory — The refs directory stores pointers into commit objects in that data.
-Head file — The HEAD file points to the branch you currently have checked out.
+OBJECTS directory — The objects directory stores all the content of the git database.
+REFS directory — The refs directory stores pointers into commit objects in that data.
+HEAD file — The HEAD file points to the branch you currently have checked out.
 
 5) 4 types of git objects
 =========================
--commit
--tree
--blob
--annotated tag
+-COMMIT
+-TREE
+-BLOB
+-ANNOTATED TAG
+
+TREEs are Git objects used to store contents of a directory.
+Each tree contains pointers that can refer to blobs and to other trees.
+Each entry in a tree contains the SHA-1 hash of a blob or tree,
+as well as the mode, type and filename.
+
+BLOBs (binary large object) are the object type Git uses to store the contents of files 
+in a given repository.
+Blobs don't even include the filenames of each file or any other data.
+They just store the contents of a file!
+
+So, BLOBs store contents of a file, and TREEs store contents of a directory.
