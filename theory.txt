@@ -64,3 +64,8 @@ Blobs don't even include the filenames of each file or any other data.
 They just store the contents of a file!
 
 So, BLOBs store contents of a file, and TREEs store contents of a directory.
+
+COMMITs objects combine a tree object along with information about the context
+that led to the current tree.
+Commits store a reference to parent commit(s), the author, the commiter,
+and of course the commit message!
