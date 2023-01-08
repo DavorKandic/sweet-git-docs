@@ -39,3 +39,5 @@ git diff <COMM1>..<COMM2>	#diffs 2 commits
 ========
 git hash-object <FILE>		#generate & show hash for object (not storing it)
 							#example on term: echo "hello world" | git hash-object --stdin
+git hash-object <FILE> -w   #stores object in git database under .git/objects
+							#example on term: echo "hello world" | git hash-object --stdin -w
